@@ -28,7 +28,7 @@ app.use('/api', routes);
 
 // connect heroku
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('build'))
+    app.use(express.static('/build'))
 }
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
